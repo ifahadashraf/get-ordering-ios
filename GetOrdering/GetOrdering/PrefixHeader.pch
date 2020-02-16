@@ -1,0 +1,50 @@
+//
+//  PrefixHeader.pch
+//  GetOrdering
+//
+//  Created by Ali Apple on 1/19/18.
+//  Copyright © 2018 Ali Apple. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+#pragma mark--External Classes
+
+#define    IS_EMPTY(c) [c stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length == 0
+#define    IS_NOT_EMPTY(c) [c stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length != 0
+#define    IS_TEXT(c) [c stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
+
+#define MAX_TYPES 4
+
+#import "SWRevealViewController.h"
+#import "Webservice.h"
+#import "Location.h"
+#pragma mark--ViewController
+
+#import "GOParentViewController.h"
+#import "GOHomeViewController.h"
+#import "GOMenuViewController.h"
+#import "GOLocationServiceViewController.h"
+#import "GOSearchHistoryViewController.h"
+#import "GOWebViewPagesViewController.h"
+#import "GOContactUsViewController.h"
+#import "FavouriteViewController.h"
+
+#import "GOMenuTableViewCell.h"
+#import "UIFloatLabelTextField.h"
+
+#import <MBProgressHUD.h>
+
+#pragma mark -- AFNetworking
+#import <AFNetworking.h>
+#import "Webservice.h"
+#import <UIImageView+WebCache.h>
+#import <UIView+WebCache.h>
+
+#endif /* PrefixHeader_pch */
